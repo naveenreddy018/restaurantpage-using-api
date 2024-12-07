@@ -1,0 +1,71 @@
+[
+    {
+          "id": 1,
+            "name": "Bikanervala",
+            "cuisine": "Indian, Sweets",
+            "img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/30/57/59/altitude-rooftop-outside.jpg?w=900&h=500&s=1",
+            "location": {
+              "address": "HITEC City, Hyderabad, Telangana",
+              "coordinates": {
+                "latitude": 17.4448,
+                "longitude": 78.3792
+              }
+            },
+            "contact": "+91 40 3300 1010",
+            "rating": 4.5,
+            "reviews_count": 1200,
+            "price_range": "₹₹"
+        
+    },
+    {
+        "id": 2,
+        "name": "The Fisherman’s Wharf",
+        "cuisine": "Seafood, Continental",
+        "img" : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/0e/c2/39/ottimo-ambience.jpg?w=900&h=500&s=1",
+        "location": {
+          "address": "Kondapur, Hyderabad, Telangana",
+          "coordinates": {
+            "latitude": 17.4424,
+            "longitude": 78.3262
+          }
+        },
+        "contact": "+91 40 2345 6789",
+        "rating": 4.3,
+        "reviews_count": 950,
+        "price_range": "₹₹₹"
+      },
+      {
+        "id": 3,
+        "name": "Paradise",
+        "cuisine": "Hyderabadi, Biryani",
+        "img" : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/0e/c2/39/ottimo-ambience.jpg?w=900&h=500&s=1",
+        "location": {
+          "address": "Secunderabad, Hyderabad, Telangana",
+          "coordinates": {
+            "latitude": 17.4479,
+            "longitude": 78.5363
+          }
+        },
+        "contact": "+91 40 2789 9940",
+        "rating": 4.7,
+        "reviews_count": 2000,
+        "price_range": "₹₹₹"
+      },
+      {
+        "id": 4,
+        "name": "Chai Pani",
+        "cuisine": "Indian, Street Food",
+        "img" : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/32/95/1f/dinning-area.jpg?w=900&h=500&s=1",
+        "location": {
+          "address": "Gachibowli, Hyderabad, Telangana",
+          "coordinates": {
+            "latitude": 17.4481,
+            "longitude": 78.3154
+          }
+        },
+        "contact": "+91 40 2776 7070",
+        "rating": 4.2,
+        "reviews_count": 850,
+        "price_range": "₹₹"
+      }
+]

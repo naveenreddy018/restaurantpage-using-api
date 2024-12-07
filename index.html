@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <style>
+        #card-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        text-align: center;
+        }
+        .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                0 -4px 8px rgba(0, 0, 0, 0.1), 
+                -4px 0 8px rgba(0, 0, 0, 0.1),
+                4px 0 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+    </style>
+</head>
+<body>
+     
+       <button>click me</button>
+       <div id="card-container" class="d-flex flex-wrap justify-content-around"></div>
+
+
+    <script>
+        const btn = document.getElementsByTagName("button")
+           const container = document.getElementById("card-container")
+      btn[0].addEventListener("click",async()=>{
+         
+        const res = await fetch("https://dummyjson-nz5c.onrender.com/restaurants")
+        const data = await res.json()
+        console.log(data)
+
+        data.forEach(element => {
+            
+            const cardDiv = document.createElement("div");
+      cardDiv.className = "card mb-3";
+      cardDiv.style = "max-width: 18rem;";
+             
+
+         const image = document.createElement("img")
+         image.src = `${element.img}`
+         image.className = "card-img-top";
+         image.style.width = "100%"; 
+
+         image.alt = element.name;
+
+       cardDiv.innerHTML = `
+        <div class="card-body">
+          <h5 class="card-title">${element.name}</h5>
+          <p class="card-text">${element.cuisine}</p>
+          <p class="card-text"><small class="text-muted">Location: ${element.location.address}</small></p>
+          <p  class="card-text">rating : ${element.rating}</p>
+         
+        </div>
+      `;
+      cardDiv.prepend(image);
+        container.appendChild(cardDiv)
+        });
+               
+
+      })
+
+    </script>
+</body>
+</html>
