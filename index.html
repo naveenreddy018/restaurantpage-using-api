@@ -39,7 +39,8 @@
         const btn = document.getElementsByTagName("button")
            const container = document.getElementById("card-container")
       btn[0].addEventListener("click",async()=>{
-        btn.disabled = true;
+     
+        btn[0].disabled = true;
          
         const res = await fetch("https://dummyjson-nz5c.onrender.com/restaurants")
         const data = await res.json()
